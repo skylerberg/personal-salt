@@ -1,0 +1,4 @@
+dotfiles:
+  users:
+    - skyler
+    - root
