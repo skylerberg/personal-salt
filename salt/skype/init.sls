@@ -1,0 +1,2 @@
+skype:
+  pkg.installed
