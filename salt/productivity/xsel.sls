@@ -1,0 +1,2 @@
+xsel:
+  pkg.installed

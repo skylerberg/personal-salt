@@ -1,8 +1,4 @@
-vim:
-  pkg.installed
-
-tmux:
-  pkg.installed
-
-xsel:
-  pkg.installed
+include:
+  - productivity.vim
+  - productivity.tmux
+  - productivity.xsel
