@@ -7,3 +7,6 @@ build-essential:
 
 git:
   pkg.installed
+
+doxygen:
+  pkg.installed
