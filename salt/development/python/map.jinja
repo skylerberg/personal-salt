@@ -1,0 +1,8 @@
+{% set python = salt['grains.filter_by']({
+    'Debian': {
+        'ipython': 'ipython'
+    },
+    'RedHat': {
+        'ipython': 'python-ipython'
+    },
+}, merge=salt['pillar.get']('python:lookup')) %}
