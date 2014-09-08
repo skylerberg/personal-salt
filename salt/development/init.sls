@@ -1,12 +1,6 @@
 include:
   - development.python
   - development.ruby
-
-build-essential:
-  pkg.installed
-
-git:
-  pkg.installed
-
-doxygen:
-  pkg.installed
+  - development.git
+  - development.build-essential
+  - development.doxygen
