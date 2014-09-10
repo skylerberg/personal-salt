@@ -3,6 +3,15 @@
 python:
   pkg.installed
 
+pip:
+  pkg.installed:
+    - name: python-pip
+
+virtualenv:
+  pip.installed:
+    - require:
+      - pkg: pip
+
 ipython:
   pkg.installed:
     - name: {{ python.ipython }}
