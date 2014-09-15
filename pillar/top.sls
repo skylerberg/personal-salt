@@ -1,4 +1,3 @@
 base:
   '*':
     - dotfiles
-    - secure.users
