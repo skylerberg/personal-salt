@@ -33,6 +33,13 @@ include:
     - user: {{ user }}
     - group: {{ user }}
 
+.gitconfig {{ user }}:
+  file.managed:
+    - name: {{home}}/.gitconfig
+    - source: salt://dotfiles/files/.gitconfig
+    - user: {{ user }}
+    - group: {{ user }}
+
 vundle {{ user }}:
   git.latest:
     - name: https://github.com/gmarik/Vundle.vim.git
