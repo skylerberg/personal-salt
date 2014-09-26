@@ -13,3 +13,4 @@ include:
   - salt
   - skype
   - users
+  - virtualization
