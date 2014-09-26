@@ -1,0 +1,15 @@
+include:
+  - chromium
+  - development
+  - disable_ipv6
+  - dotfiles
+  - fitbit
+  - latex
+  - minecraft
+  - networking
+  - productivity
+  - rdo
+  - redshift
+  - salt
+  - skype
+  - users
