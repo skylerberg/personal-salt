@@ -12,7 +12,8 @@ salt-minion:
 {% else %}
   cmd.run:
     - name: /tmp/install_salt.sh -A localhost -n git {{version}}
-{% if not version == 'develop' %}
+# If we are installing a specific version, we can add an unless
+{% if version[0] == 'v' %}
     - unless: salt-minion --version | awk '{print $2}' | grep {{version[1:]}}
 {% endif %}
 {% endif %}
