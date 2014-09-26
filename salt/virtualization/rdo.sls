@@ -8,11 +8,12 @@ openstack-packstack:
     - require:
       - pkg: rdo-release
 
-permissive:
-  selinux.mode
+#permissive:
+  #selinux.mode
 
 # TODO(skyler) Add unless
 packstack --allinone:
   cmd.run:
     - require:
-      - selinux: permissive
+      #- selinux: permissive
+      - pkg: openstack-packstack
