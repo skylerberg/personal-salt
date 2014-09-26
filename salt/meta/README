@@ -1,0 +1,16 @@
+Meta states
+===========
+
+Meta state are collections of other states. The purpose of this folder is to
+make it easier to quickly configure a system appropriately. A top file provides
+has no way of knowing if a computer is a work computer, or a personal computer.
+Furthermore, a top file has no way of knowing how much time I want to wait for
+my configuration in the moment.
+
+For example, if I have a fresh VM which I want to work on, I can choose 
+appropriate meta state. I will omit meta states that require a large time 
+investment (think LaTeX) since I will dispose of the environment in fairly 
+short order anyhow.
+
+Note: Meta states are not a thing you should know about. This name is just a 
+convention used in this project.
