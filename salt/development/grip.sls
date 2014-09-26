@@ -1,2 +1,7 @@
+include:
+  - development.python
+
 grip:
-  pip.installed
+  pip.installed:
+    - require:
+      - pkg: pip
