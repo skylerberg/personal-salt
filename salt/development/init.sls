@@ -5,3 +5,4 @@ include:
   - development.build-essential
   - development.doxygen
   - development.compilers
+  - development.patch
