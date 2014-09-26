@@ -1,5 +1,5 @@
 include:
-  - development.python
+  - development.python.pip
 
 galileo:
   pip.installed:
