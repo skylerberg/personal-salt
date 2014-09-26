@@ -1,0 +1,8 @@
+{% set compilers = salt['grains.filter_by']({
+    'Debian': {
+        'gplusplus': 'g++'
+    },
+    'RedHat': {
+        'gplusplus': 'gcc-c++',
+    }
+}, merge=salt['pillar.get']('compilers:lookup')) %}
