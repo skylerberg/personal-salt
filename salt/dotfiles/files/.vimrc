@@ -1,5 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
