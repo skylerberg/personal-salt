@@ -1,5 +1,5 @@
 include:
   - networking.traceroute
   - networking.mtr
-  - networking.openssh-server
+  - networking.openssh
   - networking.telnet

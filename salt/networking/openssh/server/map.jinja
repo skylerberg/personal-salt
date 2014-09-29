@@ -1,0 +1,8 @@
+{% set server = salt['grains.filter_by']({
+    'Debian': {
+        'sshd': 'ssh'
+    },
+    'RedHat': {
+        'sshd': 'sshd'
+    },
+}, merge=salt['pillar.get']('networking:openssh:server:lookup')) %}
