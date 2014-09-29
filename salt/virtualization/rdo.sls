@@ -1,3 +1,6 @@
+include:
+  - networking.openssh.server
+
 rdo-release:
   pkg.installed:
     - sources: 
@@ -8,12 +11,9 @@ openstack-packstack:
     - require:
       - pkg: rdo-release
 
-#permissive:
-  #selinux.mode
-
 # TODO(skyler) Add unless
 packstack --allinone:
   cmd.run:
     - require:
-      #- selinux: permissive
       - pkg: openstack-packstack
+      - service: openssh-server
