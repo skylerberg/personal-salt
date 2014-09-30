@@ -6,3 +6,4 @@ include:
   - development.doxygen
   - development.compilers
   - development.patch
+  - development.travis-lint
