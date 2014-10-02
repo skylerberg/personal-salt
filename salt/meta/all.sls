@@ -1,7 +1,6 @@
 include:
   - chromium
   - development
-  - disable_ipv6
   - dotfiles
   - fitbit
   - latex
