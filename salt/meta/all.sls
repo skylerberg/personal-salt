@@ -1,6 +1,5 @@
 include:
   - meta.development
-  - dotfiles
   - fitbit
   - latex
   - meta.networking
