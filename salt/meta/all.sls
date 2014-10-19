@@ -1,5 +1,4 @@
 include:
-  - chromium
   - development
   - dotfiles
   - fitbit
