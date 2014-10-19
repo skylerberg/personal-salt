@@ -7,3 +7,5 @@ include:
   - sudo
   - readline
   - readline.config
+  - xmodmap
+  - xmodmap.config
