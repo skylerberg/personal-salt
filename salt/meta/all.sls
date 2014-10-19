@@ -9,5 +9,4 @@ include:
   - redshift
   - salt
   - skype
-  - users
   - virtualization
