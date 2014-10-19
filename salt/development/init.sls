@@ -2,7 +2,7 @@ include:
   - development.python
   - development.ruby
   - development.git
-  - development.build-essential
+  - development.make
   - development.doxygen
   - development.compilers
   - development.patch
