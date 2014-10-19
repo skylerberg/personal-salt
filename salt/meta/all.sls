@@ -4,7 +4,6 @@ include:
   - dotfiles
   - fitbit
   - latex
-  - minecraft
   - networking
   - productivity
   - rdo
