@@ -1,5 +1,6 @@
 export EDITOR=vim
 export PS1="\[\033[01;32m\]\u \[\033[01;31m\]\t\[\033[01;34m\] \w \$\[\033[00m\] "
+[ -z "$TMUX" ] && export TERM=xterm-256color
 
 alias mkcd='_(){ mkdir $1; cd $1; }; _'
 alias update="sudo apt-get update && sudo apt-get -y upgrade"
