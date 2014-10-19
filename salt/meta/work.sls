@@ -1,6 +1,6 @@
 include:
-  - development
+  - meta.development
   - dotfiles
-  - networking
-  - productivity
+  - meta.networking
+  - meta.productivity
   - salt

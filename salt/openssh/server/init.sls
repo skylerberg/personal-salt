@@ -1,4 +1,4 @@
-{% from "networking/openssh/server/map.jinja" import server with context %}
+{% from "openssh/server/map.jinja" import server with context %}
 
 openssh-server:
   pkg:

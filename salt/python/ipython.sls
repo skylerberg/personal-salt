@@ -1,4 +1,4 @@
-{% from "development/python/map.jinja" import python with context %}
+{% from "python/map.jinja" import python with context %}
 
 ipython:
   pkg.installed:

@@ -1,12 +1,12 @@
 include:
-  - development
+  - meta.development
   - dotfiles
   - fitbit
   - latex
-  - networking
-  - productivity
+  - meta.networking
+  - meta.productivity
   - rdo
   - redshift
   - salt
   - skype
-  - virtualization
+  - meta.virtualization

@@ -1,0 +1,3 @@
+include:
+  - qemu
+  - cloud-utils

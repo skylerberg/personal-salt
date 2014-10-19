@@ -1,6 +1,6 @@
 include:
-  - development.git
-  - productivity.vim
+  - git
+  - vim
 
 {% for user in salt['pillar.get']('dotfiles:users', ['skyler']) %}
 {% set home = salt['user.info'](user).home %}
@@ -54,7 +54,7 @@ install plugins vundel {{ user }}:
     - name: vim +PluginInstall +qall 
     - user: {{ user }}
     - require:
-      - sls: productivity.vim
+      - sls: vim
       - file: .vimrc {{ user }}
       - git: vundle {{ user }}
 {% endfor %}

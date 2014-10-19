@@ -1,8 +1,7 @@
 include:
-  - development.ruby.basic
+  - ruby.basic
 
-rails:
+rspec:
   gem.installed:
     - require:
       - pkg: ruby
-

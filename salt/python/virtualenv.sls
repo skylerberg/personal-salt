@@ -1,7 +1,7 @@
 include:
-  - development.python.pip
+  - python.pip
 
-grip:
+virtualenv:
   pip.installed:
     - require:
       - pkg: pip

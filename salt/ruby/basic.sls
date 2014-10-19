@@ -1,4 +1,4 @@
-{% from "development/ruby/map.jinja" import ruby with context %}
+{% from "ruby/map.jinja" import ruby with context %}
 
 ruby:
   pkg.latest:

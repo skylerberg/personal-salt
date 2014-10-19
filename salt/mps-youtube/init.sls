@@ -1,5 +1,5 @@
 include:
-  - development.python.pip
+  - python.pip
 
 mps-youtube:
   pip.installed:
