@@ -1,4 +1,3 @@
 dotfiles:
   users:
     - skyler
-    - root
