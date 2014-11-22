@@ -1,7 +1,7 @@
-{% from "python/map.jinja" import python with context %}
+include:
+  - python.pip
 
 ipython:
-  pkg.installed:
-    - name: {{ python.ipython }}
+  pip.installed:
     - require:
-      - pkg: python
+      - pkg: pip
