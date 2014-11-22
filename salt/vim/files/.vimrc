@@ -2,6 +2,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype yaml setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype eruby setlocal expandtab tabstop=2 shiftwidth=2
+au BufReadPost *.yml set syntax=sls
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -34,6 +38,10 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'git://github.com/saltstack/salt-vim.git'
 
+Plugin 'git://github.com/wting/rust.vim'
+
+Bundle "lepture/vim-jinja"
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -52,7 +60,6 @@ Plugin 'git://github.com/saltstack/salt-vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -70,6 +77,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>" 
 let g:EasyMotion_leader_key = '<Leader>'
+let g:syntastic_python_checkers = ['flake8', 'pylint']
 
 "set ignorecase		" Do case insensitive matching
 "set smartcase		" Do smart case matching
