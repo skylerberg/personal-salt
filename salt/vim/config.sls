@@ -1,3 +1,5 @@
+{% from "vim/map.jinja" import vim with context %}
+
 include:
   - git
   - vim
@@ -26,7 +28,7 @@ install plugins vundel {{ user }}:
     - name: vim +PluginInstall +qall 
     - user: {{ user }}
     - require:
-      - sls: vim
+      - pkg: {{ vim['name'] }}
       - file: .vimrc {{ user }}
       - git: vundle {{ user }}
 

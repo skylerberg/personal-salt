@@ -1,10 +1,13 @@
+{% from "xmodmap/map.jinja" import xmodmap with context %}
+
 include:
   - xmodmap
 
 reload xmodmap:
   cmd.wait:
-    - name: xmodmap - < /etc/X11/Xmodmap
+    - name: xmodmap /etc/X11/Xmodmap
     - require:
+      - pkg: {{ xmodmap['name'] }}
       - sls: xmodmap
 
 /etc/X11/Xmodmap:

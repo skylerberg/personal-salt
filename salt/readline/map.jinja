@@ -1,0 +1,8 @@
+{% set readline = salt['grains.filter_by']({
+    'Debian': {
+        'name': 'libreadline6'
+    },
+    'RedHat': {
+        'name': 'readline',
+    }
+}) %}
