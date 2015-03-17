@@ -1,8 +1,0 @@
-{% set xmodmap = salt['grains.filter_by']({
-    'Debian': {
-        'name': 'x11-xserver-utils',
-    },
-    'RedHat': {
-        'name': 'xorg-x11-server-utils',
-    }
-}) %}

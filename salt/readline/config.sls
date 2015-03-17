@@ -1,3 +1,6 @@
+include:
+  - readline
+
 {% for user in salt['pillar.get']('dotfiles:users', ['skyler']) %}
 {% set home = salt['user.info'](user).home %}
 
