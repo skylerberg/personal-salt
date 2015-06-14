@@ -11,4 +11,11 @@ include:
     - user: {{ user }}
     - group: {{ user }}
 
+.gitignore {{ user }}:
+  file.managed:
+    - name: {{home}}/.gitignore
+    - source: salt://git/files/.gitignore
+    - user: {{ user }}
+    - group: {{ user }}
+
 {% endfor %}

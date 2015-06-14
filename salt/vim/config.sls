@@ -14,12 +14,16 @@ include:
     - user: {{ user }}
     - group: {{ user }}
 
+.nvimrc {{ user }}:
+  file.symlink:
+    - name: {{ home }}/.nvimrc
+    - target: {{ home }}/.vimrc
+
 vundle {{ user }}:
   git.latest:
     - name: https://github.com/gmarik/Vundle.vim.git
     - target: {{home}}/.vim/bundle/Vundle.vim
     - user: {{ user }}
-    - group: {{ user }}
     - require:
       - pkg: git
 

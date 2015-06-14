@@ -1,2 +1,2 @@
-python:
+git-review:
   pkg.installed

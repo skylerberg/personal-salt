@@ -1,0 +1,2 @@
+valgrind:
+  pkg.latest

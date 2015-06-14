@@ -1,0 +1,2 @@
+gparted:
+  pkg.installed

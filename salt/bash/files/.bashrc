@@ -1,6 +1,5 @@
-export EDITOR=vim
+export EDITOR=nvim
 export PS1="\[\033[01;32m\]\u \[\033[01;31m\]\t\[\033[01;34m\] \w \$\[\033[00m\] "
-[ -z "$TMUX" ] && export TERM=xterm-256color
 
 alias mkcd='_(){ mkdir $1; cd $1; }; _'
 alias update="sudo apt-get update && sudo apt-get -y upgrade"
@@ -11,6 +10,9 @@ alias vi='vim'
 alias grep='grep --color=auto'
 alias ls='ls --color'
 alias l=ls
+alias emacs='emacs -nw'
+alias vim='nvim'
+
 
 # Eternal bash history.
 # ---------------------
@@ -25,3 +27,4 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+

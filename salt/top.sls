@@ -1,8 +1,11 @@
 base:
   '*':
     #- cloud-utils
-    - compilers
+    - c
+    - c++
+    - curl
     - doxygen
+    - emacs
     #- fitbit
     - git.config
     - grip
