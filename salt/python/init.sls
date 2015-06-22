@@ -7,4 +7,4 @@ include:
   - python.dev
 
 python:
-  pkg.installed
+  pkg.latest

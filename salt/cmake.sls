@@ -1,2 +1,2 @@
-python3-tk:
+cmake:
   pkg.latest

@@ -1,4 +1,14 @@
-export EDITOR=nvim
+command_exists () {
+  command -v $1 &> /dev/null;
+}
+
+if command_exists nvim ; then
+  export EDITOR=nvim
+  alias vim='nvim'
+else
+  export EDITOR=vim
+fi
+
 export PS1="\[\033[01;32m\]\u \[\033[01;31m\]\t\[\033[01;34m\] \w \$\[\033[00m\] "
 
 alias mkcd='_(){ mkdir $1; cd $1; }; _'
@@ -11,7 +21,6 @@ alias grep='grep --color=auto'
 alias ls='ls --color'
 alias l=ls
 alias emacs='emacs -nw'
-alias vim='nvim'
 
 
 # Eternal bash history.

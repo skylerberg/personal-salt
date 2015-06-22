@@ -6,8 +6,14 @@ include:
 
 .emacs {{ user }}:
   file.managed:
-    - name: {{home}}/.emacs
+    - name: {{ home }}/.emacs
     - source: salt://emacs/files/.emacs
+    - user: {{ user }}
+    - group: {{ user }}
+
+.emacs.d {{ user }}:
+  file.directory:
+    - name: {{ home }}/.emacs.d
     - user: {{ user }}
     - group: {{ user }}
 

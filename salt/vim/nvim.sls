@@ -1,5 +1,6 @@
 include:
   - python.dev
+  - python.pip
 
 nvim:
   pkgrepo.managed:
@@ -8,4 +9,10 @@ nvim:
     - name: neovim
     - refresh: True
   require:
-    - python-dev
+    - pkg: python-dev
+
+python-neovim:
+  pip.installed:
+    - name: neovim
+    - require:
+      - pkg: pip

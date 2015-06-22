@@ -1,3 +1,3 @@
 pip:
-  pkg.installed:
+  pkg.latest:
     - name: python-pip

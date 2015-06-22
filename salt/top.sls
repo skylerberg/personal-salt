@@ -1,11 +1,12 @@
 base:
   '*':
+    - bash.config
     #- cloud-utils
     - c
     - c++
     - curl
     - doxygen
-    - emacs
+    - emacs.config
     #- fitbit
     - git.config
     - grip
