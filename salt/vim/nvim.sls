@@ -1,15 +1,20 @@
 include:
-  - python.dev
+  - python
   - python.pip
 
 nvim:
+{% if grains["os_family"] == "Debian" %}
   pkgrepo.managed:
     - ppa: neovim-ppa/unstable
-  pkg.latest:
+{% endif %}
+  pkg.installed:
     - name: neovim
     - refresh: True
+{% if grains["os_family"] == "MacOS" %}
+    - tap: neovim/neovim
+{% endif %}
   require:
-    - pkg: python-dev
+    - pkg: python
 
 python-neovim:
   pip.installed:

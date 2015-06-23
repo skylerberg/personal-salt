@@ -14,11 +14,22 @@ export PS1="\[\033[01;32m\]\u \[\033[01;31m\]\t\[\033[01;34m\] \w \$\[\033[00m\]
 alias mkcd='_(){ mkdir $1; cd $1; }; _'
 alias update="sudo apt-get update && sudo apt-get -y upgrade"
 alias ..="cd .."
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
+
+if command -v xsel; then
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+fi
+
 alias vi='vim'
 alias grep='grep --color=auto'
-alias ls='ls --color'
+
+ls --color &> /dev/null
+if [ $? -eq 0 ]; then
+  alias ls='ls --color'
+else
+  alias ls='ls -G'
+fi
+
 alias l=ls
 alias emacs='emacs -nw'
 

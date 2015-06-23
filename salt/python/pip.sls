@@ -1,3 +1,4 @@
 pip:
-  pkg.latest:
+  pkg.installed:
     - name: python-pip
+    - unless: command -v pip

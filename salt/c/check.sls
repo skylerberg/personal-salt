@@ -1,2 +1,2 @@
 check:
-  pkg.latest
+  pkg.installed

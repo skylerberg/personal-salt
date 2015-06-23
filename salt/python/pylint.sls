@@ -6,15 +6,16 @@ pylint:
     - require:
       - pkg: pip
 
+{% for user in salt['pillar.get']('dotfiles:users', [{'username': 'skyler'}]) %}
+{% set username = user.get('username', 'skyler') %}
+{% set group = user.get('group', 'skyler') %}
+{% set home = salt['user.info'](username).get('home', '/home/' + username)  %}
 
-{% for user in salt['pillar.get']('dotfiles:users', ['skyler']) %}
-{% set home = salt['user.info'](user).home %}
-
-.pylintrc {{ user }}:
+.pylintrc {{ username }}:
   file.managed:
-    - name: {{home}}/.pylintrc
+    - name: {{ home }}/.pylintrc
     - source: salt://python/files/.pylintrc
-    - user: {{ user }}
-    - group: {{ user }}
+    - user: {{ username }}
+    - group: {{ group }}
 
 {% endfor %}

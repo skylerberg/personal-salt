@@ -31,7 +31,6 @@ Plugin 'git://github.com/saltstack/salt-vim.git'
 Plugin 'git://github.com/kien/ctrlp.vim.git'
 Plugin 'git://github.com/vim-scripts/closetag.vim.git'
 Plugin 'git://github.com/wting/rust.vim'
-Plugin 'git://github.com/python-rope/ropevim.git'
 Plugin 'git://github.com/Valloric/YouCompleteMe.git'
 Plugin 'git://github.com/tpope/vim-cucumber.git'
 Bundle "lepture/vim-jinja"

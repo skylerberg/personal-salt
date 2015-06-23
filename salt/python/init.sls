@@ -4,7 +4,11 @@ include:
   - python.virtualenv
   - python.pylint
   - python.tk
-  - python.dev
 
 python:
-  pkg.latest
+  pkg.installed:
+    - names:
+      - python
+{% if grains['os_family'] != 'MacOS' %}
+      - python-dev
+{% endif %}

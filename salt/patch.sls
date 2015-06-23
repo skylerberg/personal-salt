@@ -1,2 +1,3 @@
 patch:
-  pkg.installed
+  pkg.installed:
+    - unless: command -v patch

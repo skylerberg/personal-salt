@@ -2,34 +2,35 @@
 
 include:
   - git
-  - vim
 
-{% for user in salt['pillar.get']('dotfiles:users', ['skyler']) %}
-{% set home = salt['user.info'](user).home %}
+{% for user in salt['pillar.get']('dotfiles:users', [{'username': 'skyler'}]) %}
+{% set username = user.get('username', 'skyler') %}
+{% set group = user.get('group', 'skyler') %}
+{% set home = salt['user.info'](username).get('home', '/home/' + username)  %}
 
-.vimrc {{ user }}:
+.vimrc {{ username }}:
   file.managed:
-    - name: {{home}}/.vimrc
+    - name: {{ home }}/.vimrc
     - source: salt://vim/files/.vimrc
-    - user: {{ user }}
-    - group: {{ user }}
+    - user: {{ username }}
+    - group: {{ group }}
 
-.nvimrc {{ user }}:
+.nvimrc {{ username }}:
   file.symlink:
     - name: {{ home }}/.nvimrc
     - target: {{ home }}/.vimrc
-    - user: {{ user }}
-    - group: {{ user }}
+    - user: {{ username }}
+    - group: {{ group }}
 
 {% for plugin in salt['pillar.get']('vim:plugins', []) %}
 {% set url_ = plugin["url"] %}
 {% set name = plugin["name"] %}
 
-download {{ name }} for {{ user }}:
+download {{ name }} for {{ username }}:
   git.latest:
     - name: {{ url_ }}
     - target: {{ home }}/.vim/bundle/{{ name }}
-    - user: {{ user }}
+    - user: {{ username }}
     - require:
       - pkg: git
 {% endfor %}

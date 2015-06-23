@@ -1,21 +1,23 @@
 include:
   - git
 
-{% for user in salt['pillar.get']('dotfiles:users', ['skyler']) %}
-{% set home = salt['user.info'](user).home %}
+{% for user in salt['pillar.get']('dotfiles:users', [{'username': 'skyler'}]) %}
+{% set username = user.get('username', 'skyler') %}
+{% set group = user.get('group', 'skyler') %}
+{% set home = salt['user.info'](username).get('home', '/home/' + username)  %}
 
-.gitconfig {{ user }}:
+.gitconfig {{ username }}:
   file.managed:
-    - name: {{home}}/.gitconfig
+    - name: {{ home }}/.gitconfig
     - source: salt://git/files/.gitconfig
-    - user: {{ user }}
-    - group: {{ user }}
+    - user: {{ username }}
+    - group: {{ group }}
 
-.gitignore {{ user }}:
+.gitignore {{ username }}:
   file.managed:
-    - name: {{home}}/.gitignore
+    - name: {{ home }}/.gitignore
     - source: salt://git/files/.gitignore
-    - user: {{ user }}
-    - group: {{ user }}
+    - user: {{ username }}
+    - group: {{ group }}
 
 {% endfor %}

@@ -8,7 +8,7 @@ include:
 
 salt-minion:
 {% if version == 'stable' %}
-  pkg.latest
+  pkg.installed
 {% else %}
   cmd.run:
     - name: /tmp/install_salt.sh -A localhost -n git {{version}}

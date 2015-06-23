@@ -1,3 +1,5 @@
 dotfiles:
   users:
-    - skyler
+    -
+      username: skyler
+      group: skyler

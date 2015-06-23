@@ -6,7 +6,7 @@ base:
     - c++
     - curl
     - doxygen
-    - emacs.config
+    - emacs
     #- fitbit
     - git.config
     - grip
@@ -14,13 +14,13 @@ base:
     - make
     #- mps-youtube
     - mtr
-    - openssh
+    #- openssh
     - patch
     - python
     #- qemu
-    - readline.config
+    - readline
     - ruby
-    - salt
+    #- salt
     #- skype
     - sudo
     - telnet
@@ -28,5 +28,5 @@ base:
     - traceroute
     #- transmission
     - travis-lint
-    - vim.config
+    - vim
     - xsel

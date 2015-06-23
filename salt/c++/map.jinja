@@ -5,4 +5,5 @@
     'RedHat': {
         'gplusplus': 'gcc-c++',
     }
-}, merge=salt['pillar.get']('compilers:lookup')) %}
+}, default='Debian',
+merge=salt['pillar.get']('compilers:lookup')) %}

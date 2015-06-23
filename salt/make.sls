@@ -1,2 +1,3 @@
 make:
-  pkg.installed
+  pkg.installed:
+    - unless: command -v make

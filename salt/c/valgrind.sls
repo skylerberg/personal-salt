@@ -1,2 +1,2 @@
 valgrind:
-  pkg.latest
+  pkg.installed

@@ -1,2 +1,3 @@
 telnet:
-  pkg.installed
+  pkg.installed:
+    - unless: command -v telnet

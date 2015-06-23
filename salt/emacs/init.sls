@@ -1,2 +1,5 @@
+include:
+  - emacs.config
+
 emacs:
-  pkg.latest
+  pkg.installed

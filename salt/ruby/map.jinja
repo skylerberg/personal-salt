@@ -5,4 +5,5 @@
     'RedHat': {
         'dev': 'ruby-devel'
     },
-}, merge=salt['pillar.get']('ruby:lookup')) %}
+}, default='Debian'
+, merge=salt['pillar.get']('ruby:lookup')) %}

@@ -1,14 +1,16 @@
 include:
   - readline
 
-{% for user in salt['pillar.get']('dotfiles:users', ['skyler']) %}
-{% set home = salt['user.info'](user).home %}
+{% for user in salt['pillar.get']('dotfiles:users', [{'username': 'skyler'}]) %}
+{% set username = user.get('username', 'skyler') %}
+{% set group = user.get('group', 'skyler') %}
+{% set home = salt['user.info'](username).get('home', '/home/' + username)  %}
 
-.inputrc {{ user }}:
+.inputrc {{ username }}:
   file.managed:
-    - name: {{home}}/.inputrc
+    - name: {{ home }}/.inputrc
     - source: salt://readline/files/.inputrc
-    - user: {{ user }}
-    - group: {{ user }}
+    - user: {{ username }}
+    - group: {{ group }}
 
 {% endfor %}

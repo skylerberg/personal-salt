@@ -5,4 +5,5 @@
     'RedHat': {
         'sshd': 'sshd'
     },
-}, merge=salt['pillar.get']('networking:openssh:server:lookup')) %}
+}, default='Debian',
+merge=salt['pillar.get']('networking:openssh:server:lookup')) %}
